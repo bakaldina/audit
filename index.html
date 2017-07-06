@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ООО фирма "Спец-Аудит"</title>
+    <link rel="stylesheet" href="vendor/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/dist/assets/owl.theme.default.min.css">
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
@@ -104,9 +106,7 @@
              </div>
             <h2><span class="text-border">Отзывы</span> наших клиентов</h2>
             <div class="main__carousel">
-                <a class="carousel-button carousel-button-left" href="#"></a>
-                <a class="carousel-button carousel-button-right" href="#"></a>
-                <div class="carousel-wrapper">
+                <div class="carousel-wrapper owl-theme">
                     <div class="carousel-items">
                         <div class="carousel-block">
                             <img src="image/user_photo_1.png" alt="user">
@@ -162,10 +162,23 @@
                 <p><a href="mailto:audit03@rambler.ru">audit03@rambler.ru</a></p>
             </div>
             <div class="footer__phone footer__display">
-                <p><a href="tel:+74955590354">(495)559-03-54</a></p>
-                <p><a href="tel:+74955035411">(495)503-54-11</a></p>
+                <p><a href="tel:+74955590354">+7(495)559-03-54</a></p>
+                <p><a href="tel:+74955035411">+7(495)503-54-11</a></p>
             </div>
         </section>
     </footer>
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="vendor/dist/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".carousel-wrapper").owlCarousel({
+            
+                margin:10,
+                items:3,
+                dots:false,
+                nav:true,
+            });
+        });
+    </script>
 </body>
 </html>

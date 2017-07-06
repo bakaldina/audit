@@ -162,6 +162,7 @@ footer {
     background: url(image/main_photo.png) no-repeat;
     background-size: cover;
     min-height: 523px;
+    padding: 262px 0 70px;
     box-sizing: border-box;
 }
 .header__info__block {
@@ -255,13 +256,29 @@ footer {
 .main__carousel {
     margin-bottom: 70px;
 }
-.carousel-items {
+.main__carousel .owl-item {
     display: inline-block;
     width: 290px;
     height: 365px;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    margin-left: 40px;
 }
+
+/*
+element.style {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 0;
+    background: transparent;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 0;
+    padding: 0;
+    transform: rotate(45deg);
+}*/
 .carousel-block img {
     margin-top: 30px;
 }
