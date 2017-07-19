@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ООО фирма "Спец-Аудит"</title>
+    <link rel="stylesheet" href="vendor/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/dist/assets/owl.theme.default.min.css">
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
@@ -36,9 +38,17 @@
             <nav class="header__nav">
 				<ul class="top-menu">
 					<li class="top-menu__item"><a href="#about">О компании</a></li>
-					<li class="top-menu__item"><a href="#services">Услуги</a></li>
+					<li class="top-menu__item submenu-focus"><a href="#services">Услуги</a>
+                        <ul class="submenu">
+                            <li class="submenu__item"><a href=#>Аудиторские услуги</a></li>
+                            <li class="submenu__item"><a href=#>Бухгалтерские услуги</a></li>
+                            <li class="submenu__item"><a href=#>Сдача отчетности</a></li>
+                            <li class="submenu__item"><a href=#>Юридические услуги</a></li>
+                        </ul>
+                    </li>
 					<li class="top-menu__item"><a href="#price">Расчет стоимости услуг</a></li>
 					<li class="top-menu__item"><a href="#feedback">Обратная связь</a></li>
+                    <li class="top-menu__item"><a href="#contacts">Контакты</a></li>
 				</ul>
 			</nav>
             <div class="header__info">
@@ -104,10 +114,38 @@
              </div>
             <h2><span class="text-border">Отзывы</span> наших клиентов</h2>
             <div class="main__carousel">
-                <a class="carousel-button carousel-button-left" href="#"></a>
-                <a class="carousel-button carousel-button-right" href="#"></a>
-                <div class="carousel-wrapper">
+                <div class="carousel-wrapper owl-theme">
                     <div class="carousel-items">
+                        <div class="carousel-block">
+                            <img src="image/user_photo_1.png" alt="user">
+                            <p class="carousel-block-text">Сотрудничаем со “Спец-Аудитом” на постоянной основе и очень довольны!
+                                 Они настоящие профессионалы во всем, что касается бухучета, аудита 
+                                 и юриспруденции. Будем работать с ними и дальше.</p>
+                            <p class="carousel-block-text-name">Татьяна Иванова</p>
+                            <p class="carousel-block-text-company">ООО ”ЛГЖТ”</p>
+                        </div>
+                    </div>
+                    <div class="carousel-items">
+                        <div class="carousel-block">
+                            <img src="image/user_photo_2.png" alt="user">
+                            <p class="carousel-block-text">Сотрудничаем со “Спец-Аудитом” на постоянной основе и очень довольны!
+                                 Они настоящие профессионалы во всем, что касается бухучета, аудита и юриспруденции. Будем работать
+                                 с ними и дальше.</p>
+                            <p class="carousel-block-text-name">Иван Петров</p>
+                            <p class="carousel-block-text-company">ЗАО ”Веломоторс”</p>
+                        </div>
+                    </div>
+                    <div class="carousel-items">
+                        <div class="carousel-block">
+                            <img src="image/user_photo_3.png" alt="user">
+                            <p class="carousel-block-text">Сотрудничаем со “Спец-Аудитом” на постоянной основе и очень довольны!
+                                 Они настоящие профессионалы во всем, что касается бухучета, аудита 
+                                 и юриспруденции. Будем работать с ними и дальше.</p>
+                            <p class="carousel-block-text-name">Анна Викторовна</p>
+                            <p class="carousel-block-text-company">ООО ”Сады Подмосковья”</p>
+                        </div>
+                    </div>
+                     <div class="carousel-items">
                         <div class="carousel-block">
                             <img src="image/user_photo_1.png" alt="user">
                             <p class="carousel-block-text">Сотрудничаем со “Спец-Аудитом” на постоянной основе и очень довольны!
@@ -162,10 +200,23 @@
                 <p><a href="mailto:audit03@rambler.ru">audit03@rambler.ru</a></p>
             </div>
             <div class="footer__phone footer__display">
-                <p><a href="tel:+74955590354">(495)559-03-54</a></p>
-                <p><a href="tel:+74955035411">(495)503-54-11</a></p>
+                <p><a href="tel:+74955590354">+7(495)559-03-54</a></p>
+                <p><a href="tel:+74955035411">+7(495)503-54-11</a></p>
             </div>
         </section>
     </footer>
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="vendor/dist/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".carousel-wrapper").owlCarousel({
+            
+                margin:10,
+                items:3,
+                dots:false,
+                nav:true,
+            });
+        });
+    </script>
 </body>
 </html>

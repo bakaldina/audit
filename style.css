@@ -66,6 +66,7 @@ footer {
 .header {
     min-height: 115px;
     background-color: #fff;
+    margin-top: 20px;
 }
 .header__logo {
     display: inline-block;
@@ -146,8 +147,17 @@ footer {
 .top-menu__item {
     padding: 20px 30px;
 }
+.top-menu__item a:focus {
+    background-color: #106c93;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+.top-menu__item a:active {
+    outline: none;
+}
 .top-menu li {
     display: inline-block;
+    position: relative;
 }
 .top-menu__item a {
     color: #fff;
@@ -157,11 +167,34 @@ footer {
     -webkit-transition: 0.7s;
     transition: 0.7s;
 }
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 37px;
+    left: 0;
+    font-size: 13px;
+}
+ul.submenu > .submenu-focus > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+}
+ul.submenu > .submenu-focus > a:hover {
+    text-decoration: underline;
+}
+ul.menu > .submenu-focus:hover > ul.submenu  {
+    display: block;
+}
+
 .header__info {
     width: 100%;
     background: url(image/main_photo.png) no-repeat;
     background-size: cover;
     min-height: 523px;
+    padding: 262px 0 70px;
     box-sizing: border-box;
 }
 .header__info__block {
@@ -175,6 +208,7 @@ footer {
     margin: auto;
     text-align: center;
     border-radius: 20px;
+    box-shadow: 0 0 3px #fff;
 }
 .header__info__block p {
     padding: 30px 0;
@@ -254,14 +288,31 @@ footer {
 
 .main__carousel {
     margin-bottom: 70px;
+    overflow: hidden;
 }
-.carousel-items {
+.main__carousel .owl-item {
     display: inline-block;
     width: 290px;
     height: 365px;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    margin-left: 40px;
 }
+
+/*
+element.style {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 0;
+    background: transparent;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 0;
+    padding: 0;
+    transform: rotate(45deg);
+}*/
 .carousel-block img {
     margin-top: 30px;
 }
