@@ -73,6 +73,7 @@ footer {
     vertical-align: bottom;
     width: 470px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 .header__title {
     display: inline-block;
@@ -81,6 +82,7 @@ footer {
 }
 .header__contacts {
     display: inline-block;
+    margin-bottom: 10px;
 }
 .header__contacts__item {
     display: inline-block;
@@ -143,44 +145,58 @@ footer {
     min-height: 60px;
     padding: 0;
     margin: 0;
+    font-size: 0;
 }
-.top-menu__item {
-    padding: 20px 30px;
-}
-.top-menu__item a:focus {
+.submenu__item a:hover,
+.top-menu__item a:hover{
     background-color: #106c93;
     border-radius: 30px;
-    padding: 10px 15px;
 }
 .top-menu__item a:active {
     outline: none;
 }
-.top-menu li {
+.top-menu .top-menu__item {
     display: inline-block;
+    text-align: center;
     position: relative;
+    width: 200px;
+    font-size: 14px;
 }
+.top-menu .top-menu__item:hover .submenu{
+    visibility: visible;
+}
+
+li.submenu__item > a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    padding: 5px 15px;
+}
+
 .top-menu__item a {
     color: #fff;
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 7px;
 }
 ul.submenu {
-    display: none;
+    visibility: hidden;
     position: absolute;
-    width: 120px;
-    top: 37px;
+    top: 100%;
     left: 0;
-    font-size: 13px;
-}
-ul.submenu > .submenu-focus > a {
-    display: block;
-    padding: 10px;
-    color: white;
-    background-color: red;
-    text-decoration: none;
+    font-size: 12px;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding-top: 10px;
 }
 ul.submenu > .submenu-focus > a:hover {
     text-decoration: underline;
@@ -188,7 +204,10 @@ ul.submenu > .submenu-focus > a:hover {
 ul.menu > .submenu-focus:hover > ul.submenu  {
     display: block;
 }
-
+li.submenu__item a:after {
+    content: "\003e";
+    margin-left: 9px;
+}
 .header__info {
     width: 100%;
     background: url(image/main_photo.png) no-repeat;
@@ -288,34 +307,75 @@ ul.menu > .submenu-focus:hover > ul.submenu  {
 
 .main__carousel {
     margin-bottom: 70px;
-    overflow: hidden;
+    position: relative
 }
 .main__carousel .owl-item {
     display: inline-block;
-    width: 290px;
+}
+.main__carousel .carousel-items {
     height: 365px;
+    margin: 5px;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
-
-/*
-element.style {
+.owl-stage-outer{
+    overflow: hidden
+}
+.owl-theme .owl-nav [class*=owl-]:hover{
+    background: none;
+}
+.owl-theme .owl-nav .owl-prev {
     position: absolute;
-    top: 10px;
-    left: 30px;
+    top: 150px;
+    left: -50px;
     font-size: 0;
     background: transparent;
-    border-bottom: 1px solid red;
-    border-left: 1px solid red;
+    border-bottom: 1px solid #c4c4c4;
+    border-left: 1px solid #c4c4c4;
     width: 50px;
     height: 50px;
     display: inline-block;
     border-radius: 0;
     padding: 0;
     transform: rotate(45deg);
-}*/
+}
+.owl-theme .owl-nav .owl-next {
+    position: absolute;
+    top: 150px;
+    right: -50px;
+    font-size: 0;
+    background: transparent;
+    border-bottom: 1px solid #c4c4c4;
+    border-left: 1px solid #c4c4c4;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 0;
+    padding: 0;
+    transform: rotate(-135deg);
+}
+
 .carousel-block img {
     margin-top: 30px;
+    text-align: center;
 }
+/*.carousel-block img:after {
+     display: inline-block;
+    margin: 0 0 8px 20px;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width: 20px;
+}
+.carousel-block img:before {
+ display: inline-block;
+ margin: 0 20px 8px 0;
+ height: 3px;
+ content: " ";
+ text-shadow: none;
+ background-color: #999;
+ width: 20px;
+}*/
 .carousel-block-text {
     font-size: 13px;
     line-height: 20px;
@@ -331,6 +391,7 @@ element.style {
 .carousel-block-text-name {
     font-style: italic;
 }
+
 .footer {
     background-color: #313946;
     min-height: 170px;
