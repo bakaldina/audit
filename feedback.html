@@ -64,17 +64,17 @@
         <section class="main">
             <h2><span class="text-border">Обратная</span> связь</h2>
              <div class="main__about">
-                <form class="feedback">
-                    <label>
-                        <input class="form__input" type="text" name="username" placeholder="Ваше имя">
+                <form class="feedback" id="contactform">
+                     <label>
+                        <input class="form__input" type="text" name="clientname" placeholder="Ваше имя">
                     </label>
                     <label>
-                        <input class="form__input" type="text" name="e-mail" placeholder="Ваш e-mail">
+                        <input class="form__input" type="text" name="clientemail" placeholder="Ваш e-mail">
                     </label>
                     <label>
-                        <input class="form__input" type="text" name="theme" placeholder="Тема сообщения">
+                        <input class="form__input" type="text" name="clienttheme" placeholder="Тема сообщения">
                     </label>
-                    <textarea rows="10" cols="39" name="comment" placeholder="Введите сообщение"></textarea>
+                    <textarea rows="10" cols="39" name="clientmessage" placeholder="Введите сообщение"></textarea>
                     <label>
                     <a href="#">
                         <button class="main__about__button main__about__button__feedback ">Отправить</button>
@@ -110,13 +110,18 @@
         </section>
     </footer>
 
-    <!--<script>
+    <script>
         document.getElementById('contactform').addEventListener('submit',function(evt){
         var http=new XMLHttpRequest(),
-        f=this;evt.preventDefault();
+            f=this;
+        evt.preventDefault();
         http.open("POST","contacts.php",true);
         http.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-        http.send("clientname="+f.clientname.value+"&clientemail="+f.clientemail.value+"&clientphone="+f.clientphone.value+"&clientmessage="+f.clientmessage.value);
+        http.send(
+            "clientname="+f.clientname.value+
+            "&clientemail="+f.clientemail.value+
+            "&clienttheme="+f.clienttheme.value+
+            "&clientmessage="+f.clientmessage.value);
         http.onreadystatechange=function(){
         if(http.readyState==4&&http.status==200){
             $('.poppup').addClass('poppup--active');
@@ -124,7 +129,10 @@
             f.clientmessage.removeAttribute('value');
             f.clientmessage.value='';}
         };
-    http.onerror=function(){
-        alert('Р˜Р·РІРёРЅРёС‚Рµ, РґР°РЅРЅС‹Рµ РЅРµ Р±С‹Р»Рё РїРµСЂРµРґР°РЅС‹');}
-    },false);
-    </script>-->
+        http.onerror=function(){
+            alert('ошибка');}
+        },false);
+</script>
+
+</body>
+</html>
