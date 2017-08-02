@@ -37,24 +37,24 @@
             </div>
             <nav class="header__nav">
 				<ul class="top-menu">
-					<li class="top-menu__item"><a href="#about">О компании</a></li>
-					<li class="top-menu__item submenu-focus"><a href="#services">Услуги</a>
+					<li class="top-menu__item"><a href="about-us.html">О компании</a></li>
+					<li class="top-menu__item submenu-focus"><a href="services.html">Услуги</a>
                         <ul class="submenu">
-                            <li class="submenu__item"><a href=#>Аудиторские услуги</a></li>
+                            <li class="submenu__item"><a href="services-iner.html">Аудиторские услуги</a></li>
                             <li class="submenu__item"><a href=#>Бухгалтерские услуги</a></li>
                             <li class="submenu__item"><a href=#>Сдача отчетности</a></li>
                             <li class="submenu__item"><a href=#>Юридические услуги</a></li>
                         </ul>
                     </li>
-					<li class="top-menu__item"><a href="#price">Расчет стоимости услуг</a></li>
-					<li class="top-menu__item"><a href="#feedback">Обратная связь</a></li>
-                    <li class="top-menu__item"><a href="#contacts">Контакты</a></li>
+					<li class="top-menu__item"><a href="price.html">Расчет стоимости услуг</a></li>
+					<li class="top-menu__item"><a href="feedback.html">Обратная связь</a></li>
+                    <li class="top-menu__item"><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
             <div class="header__info">
                 <div class="header__info__block">
                     <p>ПРОФЕССИОНАЛИЗМ И ГИБКИЙ ПОДХОД ПО ПРИЕМЛЕМЫМ ЦЕНАМ</p>
-                    <button class="header__info__block__button">Рассчитать стоимость услуг</button>
+                    <a href="#calculator-id"><button class="header__info__block__button">Рассчитать стоимость услуг</button></a>
                 </div>
             </div>
         </section>
@@ -88,7 +88,7 @@
             <div class="main__info">
                  <div class="main__info__block">
                     <p>ПОЛНЫЙ СПЕКТР АУДИТОРСКИХ, БУХГАЛТЕРСКИХ И ЮРИДИЧЕСКИХ УСЛУГ</p>
-                    <button class="main__info__block__button">Смотреть все наши услуги</button>
+                     <a href="services.html"><button class="main__info__block__button">Смотреть все наши услуги</button></a>
                 </div>
             </div>
             <h2><span class="text-border">О нашей</span> компании</h2>
@@ -107,10 +107,67 @@
                           Семь аудиторов имеют квалификационные аттестаты аудиторов. 
                           Стаж работы наших специалистов не менее 10 лет.</p>
                  </div>
-                 <button class="main__about__button">Читать дальше</button>
+                 <a href="about-us.html"><button class="main__about__button">Читать дальше</button></a>
              </div>
              <div class="main__calculator">
-
+                <div class="calculator" id="calculator-id">
+                    <h2><span class="text-border">Калькулятор</span> стоимости наших услуг</h2>
+                    <div class='form-calc'>
+                        <label class="label" for="">Вид аудита:
+                            <select name="kind_of_audit" class='kind_of_audit'>
+                                <option value="" selected>Обязательный</option>
+                                <option value="">Инициативный</option>
+                                <option value="">Налоговый</option>
+                                <option value="">Экспресс-аудит</option>
+                                <option value="">Финансовый</option>
+                                <option value="">Аудит по спец. заданию</option>        
+                            </select>
+                        </label>
+                        <label class="label" for="">Сколько сотрудников:
+                            <select name="number_of_employees" class='number_of_employees'>
+                                <option value="" selected>от 1 до 10</option>
+                                <option value="">от 11 до 25</option>
+                                <option value="">от 26 до 50</option>
+                                <option value="">от 51 до 100</option>
+                                <option value="">от 101 и более</option>      
+                            </select>
+                        </label>
+                        <label class="label" for="">Вид деятельности:
+                            <select name="kind_of_business" class='kind_of_business'>
+                                <option value="">Производство</option>
+                                <option value="" selected>Оказание услуг</option>
+                                <option value="">Торговля</option>
+                                <option value="">ЖКХ</option>
+                                <option value="">Строительство</option>      
+                            </select>
+                        </label>
+                        <label class="label" for="">Обороты за проверяемый период:
+                            <!--
+                            <div class="select-dol">
+                                <span class="select-dol__select">от 0 до 1 млн.</span>
+                                <ul class="select-dol__list">
+                                    <li class="select-dol__item">от 0 до 1 млн.</li>
+                                    <li class="select-dol__item">от 0 до 1 млн.</li>
+                                    <li class="select-dol__item">от 1 млн. до 5 млн.</li>
+                                    <li class="select-dol__item">от 5 до 15 млн.</li>
+                                    <li class="select-dol__item">более 15 млн.</li>  
+                                </ul>
+                            </div>-->
+                            <select name="money_for_period" class='money_for_period'>
+                                <option value="12" selected>от 0 до 1 млн.</option>
+                                <option value="31">от 0 до 1 млн.</option>
+                                <option value="123">от 1 млн. до 5 млн.</option>
+                                <option value="124">от 5 до 15 млн.</option>
+                                <option value="66">более 15 млн.</option>      
+                            </select>
+                        </label>
+                        <button class="main__about__button alaba__button">
+                            Рассчитать
+                        </button>
+                        <p class="itog">Стоимость аудита с учетом введенных параметров составит:</p>
+                        <p class="itog-input"></p>
+                    </div>
+                </div>
              </div>
             <h2><span class="text-border">Отзывы</span> наших клиентов</h2>
             <div class="main__carousel">
@@ -184,15 +241,15 @@
         <section class="footer">
             <nav class="footer__nav footer__display">
 				<ul class="bottom-menu">
-					<li class="bottom-menu__item"><a href="#about">О компании</a></li>
-					<li class="bottom-menu__item"><a href="#services">Услуги</a></li>
-					<li class="bottom-menu__item"><a href="#price">Стоимость услуг</a></li>
+					<li class="bottom-menu__item"><a href="about-us.html">О компании</a></li>
+					<li class="bottom-menu__item"><a href="services.html">Услуги</a></li>
+					<li class="bottom-menu__item"><a href="index.html#calculator-id">Стоимость услуг</a></li>
 				</ul>
             </nav>
             <nav class="footer__nav footer__display">
                 <ul class="bottom-menu">
-					<li class="bottom-menu__item"><a href="#feedback">Обратная связь</a></li>
-                    <li class="bottom-menu__item"><a href="#contacts">Контакты</a></li>
+					<li class="bottom-menu__item"><a href="feedback.html">Обратная связь</a></li>
+                    <li class="bottom-menu__item"><a href="contacts.html">Контакты</a></li>
 				</ul>
 			</nav>
             <div class="footer__cop footer__display">spec-audit.pro©2017</div>
@@ -216,6 +273,17 @@
                 dots:false,
                 nav:true,
             });
+            $('.alaba__button').click(function(){
+                var select1 = $('.kind_of_audit option:selected').text();
+                var select2 = $('.number_of_employees option:selected').text();
+                var select3 = $('.kind_of_business option:selected').text();
+                var select4 = $('.money_for_period option:selected').val();
+
+                var itog=select1 + ', '+select2 + ', '+select3 + ', '+select4
+
+                 $('.itog-input').text(itog);
+            });
+           
         });
     </script>
 </body>
